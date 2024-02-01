@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/noticeFragment"
-        android:name="com.example.news_mobile.NoticeFragment"
+        android:name="com.example.news_mobile.ui.notice.NoticeFragment"
         android:label="fragment_notice"
         tools:layout="@layout/fragment_notice" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/noticeDetailFragment"
-        android:name="com.example.news_mobile.NoticeDetailFragment"
+        android:name="com.example.news_mobile.ui.noticedetail.NoticeDetailFragment"
         android:label="fragment_notice_detail"
         tools:layout="@layout/fragment_notice_detail" />
 </navigation>
