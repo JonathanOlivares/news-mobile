@@ -51,7 +51,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //Concat Adapter
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.recyclerview:recyclerview:1.2.0")
     implementation("androidx.cardview:cardview:1.0.0")
 
     // Retrofit
@@ -72,5 +72,9 @@ dependencies {
 
     // LiveData
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    //Utils
+    implementation("com.github.bumptech.glide:glide:4.11.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
 
 }

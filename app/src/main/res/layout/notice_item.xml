@@ -34,7 +34,7 @@
         app:layout_constraintGuide_begin="55dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txt_title_item"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline4">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/txt_description_item"
             android:layout_width="wrap_content"
             android:layout_height="75dp"
             android:layout_marginStart="16dp"

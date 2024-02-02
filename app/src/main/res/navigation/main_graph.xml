@@ -18,5 +18,18 @@
         android:id="@+id/noticeDetailFragment"
         android:name="com.example.news_mobile.ui.noticedetail.NoticeDetailFragment"
         android:label="fragment_notice_detail"
-        tools:layout="@layout/fragment_notice_detail" />
+        tools:layout="@layout/fragment_notice_detail" >
+        <argument
+            android:name="backgroundImageUrl"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="publishedAt"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
 </navigation>
