@@ -7,6 +7,6 @@ import com.example.news_mobile.repository.WebService
 //Con esto ya se tiene las llamadas del datSource al webService
 class NoticeDataSource(private val webService: WebService) {
 
-   suspend fun TechCrunchNotice(): NoticeList = webService.TechCrunchNotice(AppConstants.API_KEY)
+   suspend fun getTechCrunchNotice(): NoticeList = webService.getTechCrunchNotice(AppConstants.API_KEY)
 
 }

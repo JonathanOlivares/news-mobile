@@ -11,8 +11,8 @@ import retrofit2.http.Query
 
 interface WebService {
 
-    @GET("top-headlines")
-    suspend fun TechCrunchNotice(@Query("apiKey")apiKey: String): NoticeList
+    @GET("v2/top-headlines?sources=techcrunch")
+    suspend fun getTechCrunchNotice(@Query("apiKey") apiKey: String): NoticeList
 }
 
 //Ahora generamos el WebService con un objeto de Retrofit.

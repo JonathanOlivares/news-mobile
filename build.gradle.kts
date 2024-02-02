@@ -7,8 +7,12 @@ plugins {
 buildscript {
     repositories {
         google()
+        mavenCentral()
     }
     dependencies {
+
+        classpath ("com.google.gms:google-services:4.4.0")
+        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22")
 
         //Safe Args
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.6")

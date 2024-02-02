@@ -8,6 +8,6 @@ package com.example.news_mobile.application
 object AppConstants {
 
     //API
-    const val BASE_URL = "https://newsapi.org/v2/"
+    const val BASE_URL = "https://newsapi.org/"
     const val API_KEY = "60408f4d78f54a1b8711b9e00b80d2b1"
 }
