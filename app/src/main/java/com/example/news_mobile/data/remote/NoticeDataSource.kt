@@ -1,12 +1,12 @@
 package com.example.news_mobile.data.remote
 
+import com.example.news_mobile.application.AppConstants
 import com.example.news_mobile.data.model.NoticeList
+import com.example.news_mobile.repository.WebService
 
+//Con esto ya se tiene las llamadas del datSource al webService
+class NoticeDataSource(private val webService: WebService) {
 
-class NoticeDataSource {
-
-   fun  TechCrunchNotice (): NoticeList{
-       return NoticeList()
-   }
+   suspend fun TechCrunchNotice(): NoticeList = webService.TechCrunchNotice(AppConstants.API_KEY)
 
 }
