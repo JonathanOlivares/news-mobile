@@ -2,4 +2,7 @@
     <string name="app_name">news-mobile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_book_title_item">Title notice</string>
+    <string name="txt_description_book_item">Description </string>
+    <string name="txt_date_book_item">dd/MM/2020</string>
 </resources>
