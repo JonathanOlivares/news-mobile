@@ -35,7 +35,7 @@
         app:layout_constraintGuide_end="391dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_row_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -50,11 +50,26 @@
         tools:text="Notice Title" />
 
     <TextView
+        android:id="@+id/txt_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:drawableStartCompat="@drawable/ic_baseline_person_24"
+        app:drawableTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_row_title"
+        tools:text="Author" />
+
+    <TextView
         android:id="@+id/txt_publishedAt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:drawablePadding="8dp"
+        android:layout_marginTop="1dp"
         android:gravity="center"
         android:textColor="@color/white"
         app:drawableStartCompat="@drawable/ic_baseline_calendar_today_24"
@@ -62,13 +77,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/txt_author"
         tools:text="Published 24-02-01" />
 
     <LinearLayout
         android:id="@+id/btn_favourite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -91,7 +107,7 @@
         android:id="@+id/btn_bookmark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -121,7 +137,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
-        android:id="@+id/txt_description"
+        android:id="@+id/txt_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

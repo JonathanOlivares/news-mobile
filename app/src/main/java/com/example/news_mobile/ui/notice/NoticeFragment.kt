@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ConcatAdapter
 import com.example.news_mobile.R
 import com.example.news_mobile.core.Resource
@@ -61,6 +62,13 @@ class NoticeFragment : Fragment(R.layout.fragment_notice), NoticeAdapter.OnNotic
     }
 
     override fun onNoticeClick(notice: Notice) {
-        Log.d("Notice", "OnNoticeCLick: $notice")
+        val action = NoticeFragmentDirections.actionNoticeFragmentToNoticeDetailFragment(
+            notice.urlToImage,
+            notice.title,
+            notice.author,
+            notice.publishedAt,
+            notice.content
+            )
+        findNavController().navigate(action)
     }
 }

@@ -23,13 +23,16 @@
             android:name="backgroundImageUrl"
             app:argType="string" />
         <argument
-            android:name="description"
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="author"
             app:argType="string" />
         <argument
             android:name="publishedAt"
             app:argType="string" />
         <argument
-            android:name="title"
+            android:name="content"
             app:argType="string" />
     </fragment>
 </navigation>

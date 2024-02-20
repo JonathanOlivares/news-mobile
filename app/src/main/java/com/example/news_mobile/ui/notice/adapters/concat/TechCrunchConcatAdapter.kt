@@ -22,7 +22,7 @@ class TechCrunchConcatAdapter (private val noticeAdapter: NoticeAdapter):Recycle
 
     private inner class ConcatViewHolder (val binding: NoticeRowBinding): BaseConcatHolder<NoticeAdapter>(binding.root){
         override fun bind(adapter: NoticeAdapter) {
-            binding.rvNoticeRow.adapter
+            binding.rvNoticeRow.adapter = adapter
         }
     }
 }

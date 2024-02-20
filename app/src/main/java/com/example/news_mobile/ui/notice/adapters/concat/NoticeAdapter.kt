@@ -25,53 +25,37 @@ import com.example.news_mobile.databinding.NoticeItemBinding
 class NoticeAdapter(private val noticeList: List<Notice>,
                     private val itemClickListener: OnNoticeClickListener
 ): RecyclerView.Adapter<BaseViewHolder<*>>() {
-
     interface  OnNoticeClickListener{
         fun onNoticeClick(notice: Notice)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<*> {
-        val itemBinding =
-            NoticeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemBinding = NoticeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         val holder = NoticeViewHolder(itemBinding, parent.context)
 
         itemBinding.root.setOnClickListener {
-            val position =
-                holder.bindingAdapterPosition.takeIf { it != DiffUtil.DiffResult.NO_POSITION}
+            val position = holder.bindingAdapterPosition.takeIf { it != DiffUtil.DiffResult.NO_POSITION}
                 ?: return@setOnClickListener
             itemClickListener.onNoticeClick(noticeList[position])
         }
         return holder
     }
-
     override fun onBindViewHolder(holder: BaseViewHolder<*>, position: Int) {
         when(holder){
             is NoticeViewHolder -> holder.bind(noticeList[position])
         }
     }
-
     override fun getItemCount(): Int = noticeList.size
-
-
-    // Luego se creará un Viewholder, con un inner class, da la posibilidad que al ser inner esta
-    // dentro de la clase padre que es NoticeAdapter, inner quiere decir que cuando la instancia
-    // Notice adapter muera, también la instancia de su inner class, si se ocupa sin el iiner cuando
-    // NoticeAdapter puede que el el Holder del View Holder - que es la clase abajo-, puede que este
-    // objeto quede en memoria, ocasionando un alojamiento de memoria inecesario de un objeto que no
-    // se estará ocupando.
-
-    //binding.root hace referencia a toda la layout completa podiendo acceder a ella.
-
-    //Para poder cargar la imagen se ocupará la librería Glide la cuál va a permitir cargar
-    // cualquier imagen de internet dentro del imageView.
 
     private inner class NoticeViewHolder(
         val binding: NoticeItemBinding,
         val context: Context
     ): BaseViewHolder<Notice>(binding.root){
         override fun bind(item: Notice) {
-            Glide.with(context).load(item.urlToImage)
-                .centerCrop().into(binding.imageNotice)
+            Glide.with(context).load(item.urlToImage).centerCrop().into(binding.imgNotice)
+            binding.txtTitleNoticeItem.text = item.title
+            binding.txtDescriptionBookItem.text = item.description
+            binding.txtDateBookItem.text = item.publishedAt
         }
     }
 }
